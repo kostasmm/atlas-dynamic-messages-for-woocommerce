@@ -1,0 +1,268 @@
+/**
+ * Atlas Dynamic Messages for WooCommerce CSS Styles
+ * Main stylesheet for the Dynamic Messages plugin
+ */
+
+/* Container for all messages */
+.atlas-dmsg-message-wrap {
+    margin-bottom: 20px;
+}
+
+/* Wrapper for each message */
+.atlas-dmsg-wrapper {
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+/* Last wrapper doesn't need bottom margin */
+.atlas-dmsg-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+/* Base styles for the message container - OPTIMIZED */
+.atlas-dmsg-box,
+.atlas-dmsg-layout-1 .atlas-dmsg-box {
+    display: block;
+    position: relative;
+    background-color: #fef9e7;
+    border-top: none;
+    border-left: 2px dashed #ffa800;
+    border-right: 2px dashed #ffa800;
+    border-bottom: 2px dashed #ffa800;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 15px 25px 20px;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #4b2900;
+}
+
+/* Top bar for message container - OPTIMIZED */
+.atlas-dmsg-box::before,
+.atlas-dmsg-layout-1 .atlas-dmsg-box::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #ffa800;
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Styling for text emphasis - OPTIMIZED */
+.atlas-dmsg-box strong {
+    color: #b53300;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+/* Class for countdown text */
+.atlas-dmsg-box .countdown {
+    font-weight: 700;
+    color: #b53300;
+}
+
+/* Layout 2 - Solid Modern Card */
+.atlas-dmsg-layout-2 .atlas-dmsg-box {
+    display: block;
+    background: #ffffff;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.atlas-dmsg-layout-2 .atlas-dmsg-box::before {
+    content: "🚚";
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    position: static;
+    /* Override absolute positioning */
+    height: auto;
+    width: auto;
+    background: none;
+    border-radius: 0;
+}
+
+/* Layout 3 - Gradient Alert Style - UPDATED */
+.atlas-dmsg-layout-3 .atlas-dmsg-box {
+    display: block;
+    background: linear-gradient(135deg, #ffe8d4, #ffd8b2);
+    border: 2px solid #ff6b6b;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 15px 0;
+    font-family: 'Arial', sans-serif;
+    color: #d32f2f;
+    position: relative;
+    overflow: hidden;
+    padding-top: 25px;
+    /* Increased padding for accent bar */
+}
+
+.atlas-dmsg-layout-3 .atlas-dmsg-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ff6b6b;
+    z-index: 1;
+    /* Ensure it appears on top */
+}
+
+/* Layout-specific text styles - OPTIMIZED */
+.atlas-dmsg-layout-2 .atlas-dmsg-box strong {
+    color: #2980b9;
+}
+
+.atlas-dmsg-layout-3 .atlas-dmsg-box strong {
+    color: #d32f2f;
+}
+
+/* Preview styles in admin - OPTIMIZED */
+.atlas-dmsg-preview-box.atlas-dmsg-layout-3,
+.atlas-dmsg-layout-3-preview {
+    position: relative;
+    overflow: hidden;
+    padding-top: 25px;
+    /* Increased padding to make room for accent bar */
+}
+
+.atlas-dmsg-preview-box.atlas-dmsg-layout-3::before,
+.atlas-dmsg-layout-3-preview::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ff6b6b;
+    z-index: 1;
+}
+
+.screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Styling for clickable messages */
+.atlas-dmsg-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.atlas-dmsg-link:hover {
+    opacity: 0.9;
+}
+
+.atlas-dmsg-link:active {
+    opacity: 0.8;
+}
+
+/* Add subtle indication that the message is clickable */
+.atlas-dmsg-link .atlas-dmsg-box::after {
+    content: "→";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+/* Error message styling */
+.atlas-dmsg-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+/* Responsive adjustments - OPTIMIZED */
+@media screen and (max-width: 768px) {
+    .atlas-dmsg-box,
+    .atlas-dmsg-layout-1 .atlas-dmsg-box,
+    .atlas-dmsg-layout-2 .atlas-dmsg-box,
+    .atlas-dmsg-layout-3 .atlas-dmsg-box {
+        padding: 12px 18px 15px;
+    }
+
+    .atlas-dmsg-layout-2 .atlas-dmsg-box::before {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .atlas-dmsg-layout-3 .atlas-dmsg-box {
+        padding-top: 20px;
+        /* Slightly reduced padding on mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .atlas-dmsg-box,
+    .atlas-dmsg-layout-1 .atlas-dmsg-box,
+    .atlas-dmsg-layout-2 .atlas-dmsg-box,
+    .atlas-dmsg-layout-3 .atlas-dmsg-box {
+        padding: 10px 15px 12px;
+    }
+
+    .atlas-dmsg-box strong {
+        font-size: 1em;
+    }
+
+    .atlas-dmsg-layout-3 .atlas-dmsg-box {
+        padding-top: 18px;
+        /* Further reduced padding on small mobile */
+    }
+}
+
+/* CSS for dynamic accent bars and icons */
+.has-accent-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--accent-bar-height, 5px);
+    background-color: var(--accent-bar-color, inherit);
+    z-index: 1;
+}
+
+.has-icon::after {
+    content: var(--icon-content);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.atlas-dmsg-layout-2.has-icon::before {
+    content: var(--icon-content);
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: static;
+}
