@@ -4,7 +4,7 @@ Tags: woocommerce, countdown, shipping, timer, urgency
 Requires at least: 5.0
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 2.4.2
+Stable tag: 2.4.3
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -133,6 +133,10 @@ This architecture ensures:
 6. Cache-compatible countdown updating in real-time
 
 == Changelog ==
+
+= 2.4.3 =
+* Updated: Compatibility with WordPress 6.9
+* Updated: Compatibility with WooCommerce 10.3.6
 
 = 2.4.2 =
 * NEW: Added LiteSpeed Cache compatibility with dedicated no-cache headers

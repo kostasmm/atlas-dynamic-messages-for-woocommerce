@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Atlas Dynamic Messages for WooCommerce
  * Description: Cache-compatible real-time countdown messages for WooCommerce. Works perfectly with ALL caching plugins - the only countdown plugin that bypasses cache for accurate, live updates!
- * Version: 2.4.2
+ * Version: 2.4.3
  * Author: PluginAtlas
  * Author URI: https://pluginatlas.com
  * Text Domain: atlas-dynamic-messages-for-woocommerce
@@ -10,10 +10,10 @@
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Requires at least: 5.0
- * Tested up to: 6.8
+ * Tested up to: 6.9
  * Requires PHP: 7.4
  * WC requires at least: 4.0
- * WC tested up to: 9.5
+ * WC tested up to: 10.3.6
  * Requires Plugins: woocommerce
  */
 
@@ -54,7 +54,7 @@ function atlas_dmsg_woocommerce_notice() {
 }
 
 // Define plugin constants
-define('ATLAS_DMSG_VERSION', '2.4.2');
+define('ATLAS_DMSG_VERSION', '2.4.3');
 define('ATLAS_DMSG_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('ATLAS_DMSG_PLUGIN_URL', plugin_dir_url(__FILE__));
 
