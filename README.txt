@@ -2,7 +2,7 @@
 Contributors: malakontask
 Tags: woocommerce, countdown, shipping, timer, urgency
 Requires at least: 5.0
-Tested up to: 6.8.2
+Tested up to: 6.9
 Requires PHP: 7.4
 Stable tag: 2.4.2
 License: GPL-2.0+
